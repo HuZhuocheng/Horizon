@@ -1,0 +1,40 @@
+{
+  "rules": [
+    {
+      "id": "R001",
+      "name": "资产负债率校验",
+      "description": "制造业中小微企业资产负债率合理区间为 40% - 60%，大于 70% 提示高风险。",
+      "category": "财务指标",
+      "threshold": 70,
+      "operator": ">",
+      "risk_level": "high",
+      "suggestion": "资产负债率过高，存在较大偿债风险，建议进一步核实负债结构。"
+    },
+    {
+      "id": "R002",
+      "name": "重大涉诉校验",
+      "description": "企业作为被告的涉诉案件金额超过 100 万元或存在被执行人记录。",
+      "category": "司法风险",
+      "risk_level": "high",
+      "suggestion": "存在重大未结诉讼或被执行记录，存在资金冻结风险。"
+    },
+    {
+      "id": "R003",
+      "name": "流动比率校验",
+      "description": "流动比率小于 1.5 提示流动性风险（黄色提示）。",
+      "category": "财务指标",
+      "threshold": 1.5,
+      "operator": "<",
+      "risk_level": "medium",
+      "suggestion": "流动比率偏低，短期偿债能力可能不足。"
+    },
+    {
+      "id": "R004",
+      "name": "股权异动校验",
+      "description": "近 6 个月内实际控制人或大股东发生变更。",
+      "category": "工商信息",
+      "risk_level": "medium",
+      "suggestion": "近期存在股权变更，需关注企业实际控制权稳定性。"
+    }
+  ]
+}
